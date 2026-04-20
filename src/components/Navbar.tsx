@@ -1,13 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
- 
 
   const navLinks = [
     { name: "HOME", href: "/" },
@@ -22,17 +19,13 @@ const Navbar = () => {
   const brandTurquoise = "#00e0d1";
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-3 cursor-pointer group">
             <div 
               className="h-12 w-12 rounded-full border-2 overflow-hidden transition-transform duration-300 group-hover:scale-110 shadow-[0_0_15px_rgba(0,224,209,0.2)]"
-              style={{ borderColor: `${brandTurquoise}4d` }} // 30% opacity
+              style={{ borderColor: `${brandTurquoise}4d` }}
             >
               <img
                 src={logoUrl}
@@ -104,7 +97,7 @@ const Navbar = () => {
                   }
                   style={({ isActive }) => ({
                     color: isActive ? brandTurquoise : undefined,
-                    backgroundColor: isActive ? `${brandTurquoise}1a` : undefined, // 10% opacity
+                    backgroundColor: isActive ? `${brandTurquoise}1a` : undefined,
                   })}
                 >
                   {link.name}
