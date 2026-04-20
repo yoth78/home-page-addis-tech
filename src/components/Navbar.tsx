@@ -16,12 +16,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Products", href: "/products" },
-    { name: "Training", href: "/training" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "HOME", href: "/" },
+    { name: "SERVICES", href: "/SERVICES" },
+    { name: "PRODUCTS", href: "/PRODUCTS" },
+    { name: "TRAINING", href: "/TRAINING" },
+    { name: "ABOUT", href: "/ABOUT" },
+    { name: "CONTACT", href: "/CONTACT" },
   ];
 
   const logoUrl = "https://storage.googleapis.com/dala-prod-public-storage/attachments/8125c7aa-d9dd-4e40-b993-5621fdf4e946/1776176534136_logo.jpg";
